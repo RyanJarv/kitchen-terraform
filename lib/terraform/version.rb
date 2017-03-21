@@ -31,15 +31,15 @@ module Terraform
     end
 
     def self.deprecated
-      [new(value: '0.6')]
+      [new(value: '0.7')]
     end
 
     def self.latest
-      new value: '0.8'
+      new value: '0.9'
     end
 
     def self.supported
-      [latest, new(value: '0.7'), *deprecated]
+      [latest, new(value: '0.8'), *deprecated]
     end
 
     def ==(other)

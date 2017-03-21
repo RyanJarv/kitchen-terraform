@@ -4,7 +4,7 @@ driver:
 provisioner:
   name: terraform
   directory: test/fixtures/<%=
-    `terraform -version`.include? '0.6' and 'deprecated' or 'supported'
+    `terraform -version`.include? '0.7' and 'deprecated' or 'supported'
   %>
   parallelism: 4
 transport:
