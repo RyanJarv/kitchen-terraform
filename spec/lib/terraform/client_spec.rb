@@ -26,7 +26,7 @@ require 'terraform/client'
   end
 
   shared_context 'outputs are defined', :outputs do
-    let(:version) { '0.7' }
+    let(:version) { '0.9' }
 
     before do
       allow(described_instance).to receive(:version).with(no_args)

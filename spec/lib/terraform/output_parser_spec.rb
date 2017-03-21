@@ -36,7 +36,7 @@ require 'terraform/version'
     end
 
     context 'when the version does not support JSON' do
-      let(:version) { '0.7' }
+      let(:version) { '0.6' }
 
       it 'returns a DeprecatedOutputParser' do
         is_expected.to be_instance_of ::Terraform::DeprecatedOutputParser
