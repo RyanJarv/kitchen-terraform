@@ -147,7 +147,7 @@ require 'support/terraform/configurable_context'
                         version: ::Terraform::Version.create(value: version)
     end
 
-    let(:version) { '0.7' }
+    let(:version) { '0.9' }
 
     it_behaves_like('a target is set') { let(:target) { '/target' } }
 
