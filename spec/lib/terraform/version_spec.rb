@@ -32,7 +32,7 @@ require 'terraform/version'
     end
 
     context 'when the value is supported and deprecated' do
-      let(:value) { '0.7' }
+      let(:value) { '0.6' }
 
       it 'returns a DeprecatedVersion' do
         is_expected.to be_instance_of ::Terraform::DeprecatedVersion

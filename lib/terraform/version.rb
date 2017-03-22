@@ -31,7 +31,7 @@ module Terraform
     end
 
     def self.deprecated
-      [new(value: '0.7')]
+      [new(value: '0.6')]
     end
 
     def self.latest

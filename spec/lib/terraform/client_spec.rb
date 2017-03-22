@@ -26,7 +26,7 @@ require 'terraform/client'
   end
 
   shared_context 'outputs are defined', :outputs do
-    let(:version) { '0.9' }
+    let(:version) { '0.7' }
 
     before do
       allow(described_instance).to receive(:version).with(no_args)
@@ -205,7 +205,7 @@ require 'terraform/client'
   describe '#version' do
     before do
       allow(described_instance).to receive(:execute)
-        .with(command: kind_of(::Terraform::VersionCommand)).and_yield '0.8'
+        .with(command: kind_of(::Terraform::VersionCommand)).and_yield '0.9'
     end
 
     subject { described_instance.version }
