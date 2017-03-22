@@ -28,7 +28,7 @@ require 'terraform/version'
     end
 
     context 'when the version does support JSON' do
-      let(:version) { '0.9' }
+      let(:version) { '0.8' }
 
       it 'returns an OutputParser' do
         is_expected.to be_instance_of described_class

@@ -19,8 +19,8 @@ require 'terraform/project_version.rb'
     'Michael Glenney',
     'Nell Shamrell-Harrington',
     'Nick Willever',
-    'Walter Dolce',
-    'Steven A. Burns'
+    'Steven A. Burns',
+    'Walter Dolce'
   ]
 
   specification.files = ::Dir.glob '{lib/**/*.rb,LICENSE,README.md}'
