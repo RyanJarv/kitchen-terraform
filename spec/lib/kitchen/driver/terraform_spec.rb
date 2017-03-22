@@ -103,7 +103,7 @@ require 'support/terraform/configurable_examples'
     end
 
     context 'when the Terraform version is deprecated' do
-      let(:version) { '0.7' }
+      let(:version) { '0.6' }
 
       after { described_instance.verify_dependencies }
 
@@ -111,7 +111,7 @@ require 'support/terraform/configurable_examples'
 
       it 'logs a deprecation' do
         is_expected.to receive(:log_deprecation)
-          .with aspect: 'Terraform v0.7', remediation: 'Install Terraform v0.9'
+          .with aspect: 'Terraform v0.6', remediation: 'Install Terraform v0.9'
       end
     end
   end
