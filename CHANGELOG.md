@@ -6,13 +6,14 @@ format is based on [Keep a CHANGELOG].
 This project adheres to [Semantic Versioning] with the exception that
 major version 0.y.z will maintain a stable public interface.
 
+
 ## [0.7.0] - 2017-03-21
 
 ### Added
 
 * Support for Terraform v0.9
 
-## [0.6.1] - 2017-02-22
+## [0.6.1] - 2017-02-23
 
 ### Fixed
 
