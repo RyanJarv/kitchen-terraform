@@ -6,6 +6,7 @@
 **/inspec.lock
 *.gem
 */.idea/
+**.swp
 certs/private_key.pem
 coverage/
 examples/openstack_provider/my-variables.tfvars
