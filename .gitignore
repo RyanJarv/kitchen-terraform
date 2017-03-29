@@ -5,7 +5,7 @@
 **/Gemfile.lock
 **/inspec.lock
 *.gem
-*/.idea/
+**.idea/
 **.swp
 certs/private_key.pem
 coverage/

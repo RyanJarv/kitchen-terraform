@@ -27,7 +27,6 @@ module Terraform
       super
       preparations.concat [
         ::Terraform::PrepareInputFile.new(file: target),
-        ::Terraform::PrepareOutputFile.new(file: options.state)
       ]
     end
   end

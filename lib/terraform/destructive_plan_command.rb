@@ -28,8 +28,8 @@ module Terraform
 
     def initialize(target: '')
       super
-      preparations
-        .push ::Terraform::PrepareInputFile.new file: options.state
+      #preparations
+        #.push ::Terraform::PrepareInputFile.new file: options.state
     end
   end
 end

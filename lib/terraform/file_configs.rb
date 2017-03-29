@@ -23,7 +23,7 @@ module Terraform
     include ::Terraform::SimpleConfig
 
     def self.extended(configurable_class)
-      %i(plan state).each do |attr|
+      %i(plan).each do |attr|
         configurable_class.configure_required(
           attr: attr, coercer_class: ::Terraform::PathnameCoercer,
           default_value: lambda do |configurable|

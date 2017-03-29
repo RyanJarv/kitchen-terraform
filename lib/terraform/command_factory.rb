@@ -31,7 +31,6 @@ module Terraform
         options.color = config[:color]
         options.input = false
         options.parallelism = config[:parallelism]
-        options.state = config[:state]
       end
     end
 
@@ -63,7 +62,7 @@ module Terraform
     end
 
     def show_command
-      ::Terraform::ShowCommand.new target: config[:state] do |options|
+      ::Terraform::ShowCommand.new do |options|
         options.color = config[:color]
       end
     end
@@ -85,7 +84,6 @@ module Terraform
 
       ::Terraform::OutputCommand.new target: target do |options|
         options.color = config[:color]
-        options.state = config[:state]
         block.call options
       end
     end
@@ -95,7 +93,7 @@ module Terraform
       options.input = false
       options.out = config[:plan]
       options.parallelism = config[:parallelism]
-      options.state = config[:state]
+      #options.state = config[:state]
       options.var = config[:variables]
       options.var_file = config[:variable_files]
     end

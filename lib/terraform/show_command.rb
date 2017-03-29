@@ -24,7 +24,7 @@ module Terraform
 
     def initialize(target: '')
       super
-      preparations.push ::Terraform::PrepareInputFile.new file: target
+      #preparations.push ::Terraform::PrepareInputFile.new file: target
     end
   end
 end
