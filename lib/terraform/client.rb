@@ -31,8 +31,8 @@ module Terraform
       apply plan_command: factory.destructive_plan_command
     end
 
-    def each_output_name(&block)
-      output_parser(name: '').each_name(&block)
+    def each_output(&block)
+      output_parser(name: '').each(&block)
     end
 
     def iterate_output(name:, &block)

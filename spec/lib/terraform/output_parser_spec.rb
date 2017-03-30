@@ -44,16 +44,17 @@ require 'terraform/version'
     end
   end
 
-  describe '#each_name' do
+  describe '#each' do
     let :output do
       ::JSON.dump 'output_name_1' => 'output_value_1',
                   'output_name_2' => 'output_value_2'
     end
 
-    subject { ->(block) { described_instance.each_name(&block) } }
+    subject { ->(block) { described_instance.each(&block) } }
 
     it 'yields each output name' do
-      is_expected.to yield_successive_args 'output_name_1', 'output_name_2'
+      is_expected.to yield_successive_args %w(output_name_1 output_value_1),
+                                           %w(output_name_2 output_value_2)
     end
   end
 
