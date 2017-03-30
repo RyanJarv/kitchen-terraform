@@ -50,8 +50,8 @@ module Terraform
     end
 
     def version
-      execute command: factory.version_command do |value|
-        return ::Terraform::Version.create value: value
+      @version ||= execute command: factory.version_command do |value|
+        ::Terraform::Version.create value: value
       end
     end
 
