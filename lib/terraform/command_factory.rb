@@ -16,7 +16,7 @@
 
 require 'terraform/apply_command'
 require 'terraform/destructive_plan_command'
-require 'terraform/get_command'
+require 'terraform/init_command'
 require 'terraform/output_command'
 require 'terraform/plan_command'
 require 'terraform/show_command'
@@ -43,8 +43,8 @@ module Terraform
     end
 
     def get_command
-      ::Terraform::GetCommand.new target: config[:directory] do |options|
-        options.update = true
+      ::Terraform::InitCommand.new do |options|
+        #options.update = true
       end
     end
 
