@@ -31,9 +31,9 @@ require 'terraform/group_attributes'
     end
 
     before do
-      allow(client).to receive(:each_output)
-        .with(no_args).and_yield('output_name_1', 'output_value_1')
-        .and_yield 'output_name_2', 'output_value_2'
+      allow(client).to receive(:each_output).with(no_args)
+        .and_yield('output_name_1', 'output_value_1')
+        .and_yield('output_name_2', 'output_value_2')
 
       allow(client).to receive(:output)
         .with(name: 'not_output_name_1').and_return 'output_value_1'
