@@ -17,7 +17,7 @@
 module Terraform
   # A null parser for when there are no outputs defined
   class NoOutputParser
-    def each_name; end
+    def each; end
 
     def iterate_parsed_output; end
 

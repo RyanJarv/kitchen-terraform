@@ -30,7 +30,7 @@ module Terraform
 
     def coercer(value:)
       [::Array, ::String]
-        .find proc { return simple_coercer }, &value.method(:is_a?)
+        .find(proc { return simple_coercer }, &value.method(:is_a?))
 
       ::Terraform::DeprecatedVariablesCoercer.new configurable: configurable
     end

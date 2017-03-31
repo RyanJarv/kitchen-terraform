@@ -31,8 +31,8 @@ module Terraform
       apply plan_command: factory.destructive_plan_command
     end
 
-    def each_output_name(&block)
-      output_parser(name: '').each_name(&block)
+    def each_output(&block)
+      output_parser(name: '').each(&block)
     end
 
     def iterate_output(name:, &block)
@@ -50,8 +50,8 @@ module Terraform
     end
 
     def version
-      execute command: factory.version_command do |value|
-        return ::Terraform::Version.create value: value
+      @version ||= execute command: factory.version_command do |value|
+        ::Terraform::Version.create value: value
       end
     end
 

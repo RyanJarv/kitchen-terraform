@@ -29,8 +29,8 @@ module Terraform
     end
 
     def resolve(client:)
-      client.each_output_name { |name| soft_store key: name, value: name }
       dup.each_pair { |key, value| store key, client.output(name: value) }
+      client.each_output { |k, v| soft_store key: k, value: v }
     end
 
     private

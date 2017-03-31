@@ -28,8 +28,8 @@ module Terraform
       new output: output
     end
 
-    def each_name(&block)
-      json_output.each_key(&block)
+    def each(&block)
+      json_output.each(&block)
     end
 
     def iterate_parsed_output(&block)
