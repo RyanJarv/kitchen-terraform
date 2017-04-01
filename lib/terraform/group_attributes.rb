@@ -30,7 +30,7 @@ module Terraform
 
     def resolve(client:)
       dup.each_pair { |key, value| store key, client.output(name: value) }
-      client.each_output { |k, v| soft_store key: k, value: v }
+      client.each_output { |k, v| soft_store key: k, value: v['value'] }
     end
 
     private
