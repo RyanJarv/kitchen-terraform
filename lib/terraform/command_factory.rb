@@ -44,7 +44,7 @@ module Terraform
 
     def get_command
       ::Terraform::InitCommand.new do |options|
-        #options.update = true
+        options.get = false
       end
     end
 

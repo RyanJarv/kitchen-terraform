@@ -60,6 +60,10 @@ module Terraform
       store key: 'update', value: value
     end
 
+    def get=(value)
+      store key: 'get', value: value
+    end
+
     def var=(value)
       value.each_pair do |variable_name, variable_value|
         store key: 'var', value: "'#{variable_name}=#{variable_value}'"
